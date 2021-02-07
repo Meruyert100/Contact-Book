@@ -27,6 +27,11 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private func setupContacts() {
         contacts = ContactManager.instance.users
+        if contacts.isEmpty {
+            navigationItem.title = "No Contacts yet"
+        } else {
+            navigationItem.title = "Contacts"
+        }
         tableView.reloadData()
     }
     

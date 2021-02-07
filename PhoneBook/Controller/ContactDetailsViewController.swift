@@ -35,6 +35,12 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPic
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destVC = segue.destination as? MakeCallViewController else { return }
+        let callUser = user
+        destVC.user = callUser
+    }
+    
     @IBAction func contactSaved(_ sender: Any) {
         guard var editedUser = user else { return }
 

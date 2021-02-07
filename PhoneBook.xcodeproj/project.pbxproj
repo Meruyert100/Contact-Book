@@ -20,6 +20,7 @@
 		1379E1F225D004C200157D13 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */; };
 		1379E1F525D0118500157D13 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1F425D0118500157D13 /* Notification.swift */; };
 		1379E1F825D018F600157D13 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1F725D018F600157D13 /* AddContactViewController.swift */; };
+		1379E1FB25D0528E00157D13 /* MakeCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1FA25D0528E00157D13 /* MakeCallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		1379E1F425D0118500157D13 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		1379E1F725D018F600157D13 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		1379E1FA25D0528E00157D13 /* MakeCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				1379E1CC25CFFBEA00157D13 /* ContactsViewController.swift */,
-				1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */,
 				1379E1F725D018F600157D13 /* AddContactViewController.swift */,
+				1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */,
+				1379E1FA25D0528E00157D13 /* MakeCallViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1379E1EF25D0030C00157D13 /* ContactManager.swift in Sources */,
+				1379E1FB25D0528E00157D13 /* MakeCallViewController.swift in Sources */,
 				1379E1EC25D002A600157D13 /* Contact.swift in Sources */,
 				1379E1F525D0118500157D13 /* Notification.swift in Sources */,
 				1379E1E425D000CD00157D13 /* ContactTableViewCell.swift in Sources */,
@@ -372,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.meruyerttass.PhoneBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -391,7 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.meruyerttass.PhoneBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
