@@ -30,6 +30,7 @@ class ContactTableViewCell: UITableViewCell {
         nameLabel.text = name
         numberLabel.text = number
         avatarImageView.image = image
+        
     }
 
 }

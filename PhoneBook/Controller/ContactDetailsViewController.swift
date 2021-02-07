@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
+class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -16,6 +16,9 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var genderPickerView: UIPickerView!
     
     var user: Contact?
+    var gender: String?
+    
+    var pickerData = ["Male","Female"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,7 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
         lastnameTextField.delegate = self
         numberTextField.delegate = self
+        genderPickerView.delegate = self
         
     }
     
@@ -43,6 +47,15 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
         let newPhone = numberTextField.text ?? ""
         guard !newPhone.isEmpty else { return }
         editedUser.phone = newPhone
+        let newGender = gender ?? "Male"
+        guard !newGender.isEmpty else { return }
+        editedUser.gender = newGender
+        
+        if editedUser.gender == "Male" {
+            editedUser.image = UIImage(named: "male.png")
+        } else {
+            editedUser.image = UIImage(named: "female.png")
+        }
         
         ContactManager.instance.editUser(editedUser)
         NotificationCenter.default.post(name: .UserEdited, object: nil)
@@ -54,6 +67,27 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
         ContactManager.instance.deleteUser(user)
         NotificationCenter.default.post(name : .UserDeleted, object: nil)
         navigationController?.popViewController(animated: true)
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    private func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+    {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        gender = pickerData[row]
     }
 
 }

@@ -57,6 +57,20 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+            let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
+                
+                 let contact = self.contacts[indexPath.row]
+                 
+                 ContactManager.instance.deleteUser(contact)
+
+                self.setupContacts()
+            }
+
+            return UISwipeActionsConfiguration(actions: [deleteAction])
+        }
+    
 
 }
 
