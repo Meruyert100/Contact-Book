@@ -10,4 +10,5 @@ import Foundation
 extension Notification.Name {
     static let UserDeleted = Notification.Name("UserDeleted")
     static let UserEdited = Notification.Name("UserEdited")
+    static let HistoryUserEdited = Notification.Name("UserAddedToHistory")
 }

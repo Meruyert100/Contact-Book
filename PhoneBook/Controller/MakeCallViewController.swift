@@ -24,6 +24,8 @@ class MakeCallViewController: UIViewController {
     
     @IBAction func callEnded(_ sender: Any) {
         self.dismiss(animated: true, completion: .none)
+        ContactManager.instance.addHistoryUser(user!)
+        NotificationCenter.default.post(name: .HistoryUserEdited, object: nil)
     }
 
 }

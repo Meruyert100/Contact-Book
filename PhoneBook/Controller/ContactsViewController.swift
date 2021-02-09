@@ -58,7 +58,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         let user = contacts[indexPath.row]
         let userAvatar = user.image ?? UIImage(systemName: "person")
         let userPhone = user.phone
-        cell.update(name: user.secondName, number: userPhone, image: userAvatar!)
+        cell.update(name: user.firstName + " " + user.secondName, number: userPhone, image: userAvatar!)
         return cell
     }
     

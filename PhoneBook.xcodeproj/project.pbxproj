@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1343BC2125D26B7400628EC6 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343BC2025D26B7400628EC6 /* HistoryViewController.swift */; };
+		1343BC2525D26D6700628EC6 /* HistoryContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343BC2425D26D6700628EC6 /* HistoryContactTableViewCell.swift */; };
 		1379E1C925CFFBEA00157D13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1C825CFFBEA00157D13 /* AppDelegate.swift */; };
 		1379E1CB25CFFBEA00157D13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1CA25CFFBEA00157D13 /* SceneDelegate.swift */; };
 		1379E1CD25CFFBEA00157D13 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379E1CC25CFFBEA00157D13 /* ContactsViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1343BC2025D26B7400628EC6 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		1343BC2425D26D6700628EC6 /* HistoryContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContactTableViewCell.swift; sourceTree = "<group>"; };
 		1379E1C525CFFBEA00157D13 /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1379E1C825CFFBEA00157D13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1379E1CA25CFFBEA00157D13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			children = (
 				1379E1CE25CFFBEA00157D13 /* Main.storyboard */,
 				1379E1E325D000CD00157D13 /* ContactTableViewCell.swift */,
+				1343BC2425D26D6700628EC6 /* HistoryContactTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				1379E1CC25CFFBEA00157D13 /* ContactsViewController.swift */,
+				1343BC2025D26B7400628EC6 /* HistoryViewController.swift */,
 				1379E1F725D018F600157D13 /* AddContactViewController.swift */,
 				1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */,
 				1379E1FA25D0528E00157D13 /* MakeCallViewController.swift */,
@@ -212,10 +218,12 @@
 				1379E1EF25D0030C00157D13 /* ContactManager.swift in Sources */,
 				1379E1FB25D0528E00157D13 /* MakeCallViewController.swift in Sources */,
 				1379E1EC25D002A600157D13 /* Contact.swift in Sources */,
+				1343BC2125D26B7400628EC6 /* HistoryViewController.swift in Sources */,
 				1379E1F525D0118500157D13 /* Notification.swift in Sources */,
 				1379E1E425D000CD00157D13 /* ContactTableViewCell.swift in Sources */,
 				1379E1CD25CFFBEA00157D13 /* ContactsViewController.swift in Sources */,
 				1379E1F825D018F600157D13 /* AddContactViewController.swift in Sources */,
+				1343BC2525D26D6700628EC6 /* HistoryContactTableViewCell.swift in Sources */,
 				1379E1E825D0020C00157D13 /* ImageViewExtension.swift in Sources */,
 				1379E1C925CFFBEA00157D13 /* AppDelegate.swift in Sources */,
 				1379E1F225D004C200157D13 /* ContactDetailsViewController.swift in Sources */,
