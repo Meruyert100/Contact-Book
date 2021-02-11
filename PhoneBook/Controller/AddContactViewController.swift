@@ -61,11 +61,6 @@ class AddContactViewController: UIViewController,  UITextFieldDelegate, UIPicker
         return pickerData.count
     }
     
-    private func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
-    {
-        return pickerData[row]
-    }
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }

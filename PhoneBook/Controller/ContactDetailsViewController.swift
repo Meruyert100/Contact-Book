@@ -33,6 +33,12 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPic
         numberTextField.delegate = self
         genderPickerView.delegate = self
         
+        if user?.gender == "male" {
+            genderPickerView.selectRow(0, inComponent: 0, animated: false)
+        } else {
+            genderPickerView.selectRow(1, inComponent: 0, animated: false)
+        }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,11 +59,11 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPic
         let newPhone = numberTextField.text ?? ""
         guard !newPhone.isEmpty else { return }
         editedUser.phone = newPhone
-        let newGender = gender ?? "Male"
-        guard !newGender.isEmpty else { return }
-        editedUser.gender = newGender
+        let newGender = gender ?? user?.gender
+        guard !newGender!.isEmpty else { return }
+        editedUser.gender = newGender!
         
-        if editedUser.gender == "Male" {
+        if editedUser.gender == "Male" || editedUser.gender == "male"  {
             editedUser.image = UIImage(named: "male.png")
         } else {
             editedUser.image = UIImage(named: "female.png")
@@ -81,11 +87,6 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPic
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
-    }
-    
-    private func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
-    {
-        return pickerData[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
