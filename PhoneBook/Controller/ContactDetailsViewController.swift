@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol DeleteUserProtocol {
+    func deleteUser(_ i: Int)
+}
+
 class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var delegate: DeleteUserProtocol?
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -17,6 +23,7 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPic
     
     var user: Contact?
     var gender: String?
+    var index: Int?
     
     var pickerData = ["Male","Female"]
     
@@ -75,9 +82,11 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate, UIPic
     }
     
     @IBAction func contactDeleted(_ sender: Any) {
-        guard let user = user else { return }
-        ContactManager.instance.deleteUser(user)
-        NotificationCenter.default.post(name : .UserDeleted, object: nil)
+//        guard let user = user else { return }
+//        ContactManager.instance.deleteUser(user)
+//        NotificationCenter.default.post(name : .UserDeleted, object: nil)
+//        navigationController?.popViewController(animated: true)
+        delegate?.deleteUser(index!)
         navigationController?.popViewController(animated: true)
     }
     

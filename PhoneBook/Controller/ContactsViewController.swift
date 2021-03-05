@@ -41,6 +41,8 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             let indexPath = tableView.indexPath(for: cell) else { return }
         let user = contacts[indexPath.row]
         destVC.user = user
+        destVC.index = indexPath.row
+        destVC.delegate = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,7 +81,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
 
 }
 
-
 extension ContactsViewController {
     @objc private func userDeleted() {
         setupContacts()
@@ -87,4 +88,13 @@ extension ContactsViewController {
     @objc private func userEdited() {
         setupContacts()
     }
+}
+
+extension ContactsViewController: DeleteUserProtocol {
+    func deleteUser(_ i: Int) {
+        ContactManager.instance.users.remove(at: i)
+        setupContacts()
+    }
+    
+    
 }

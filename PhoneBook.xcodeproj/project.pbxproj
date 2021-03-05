@@ -110,9 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				1379E1CC25CFFBEA00157D13 /* ContactsViewController.swift */,
+				1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */,
 				1343BC2025D26B7400628EC6 /* HistoryViewController.swift */,
 				1379E1F725D018F600157D13 /* AddContactViewController.swift */,
-				1379E1F125D004C200157D13 /* ContactDetailsViewController.swift */,
 				1379E1FA25D0528E00157D13 /* MakeCallViewController.swift */,
 			);
 			path = Controller;

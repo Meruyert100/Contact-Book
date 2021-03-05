@@ -11,7 +11,7 @@ import UIKit
 final class ContactManager {
     static let instance = ContactManager()
     
-    private (set) var users: [Contact] = []
+    var users: [Contact] = []
     private (set) var historyUsers: [Contact] = []
     
     init() {
